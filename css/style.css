@@ -1,0 +1,306 @@
+/***All***/
+
+@font-face{
+
+    font-family: 'icones';
+    src: url(../font/icones.ttf);
+}
+
+*{
+
+    box-sizing: border-box;
+    font-family: 'Open Sans', 'icones', sans-serif;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    color: white;
+    text-decoration: none;
+}
+
+:root{
+
+    --header_background-color: #15191c;
+    --card-box_background: #2C343A;
+    --card-box__info--color: #95999C;
+    --card-box__button--background: #0480DC;
+    --card-box__button--font__size: 14px;
+    --card-box__button--font__weight: 600;
+    --card-box__button--tamanho: 40px;
+}
+
+body{
+
+    font-family: 'Open Sans', 'icones', sans-serif;
+    background-color: #1D232A;
+}
+
+main{
+
+    padding: 0.75rem;
+    display: grid;
+    gap: 16px;
+}
+
+/***Header***/
+
+header{
+
+    background-color: var(--header_background-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+    box-shadow: 0 3px 5px 0 var(--header-background-color);
+    position: sticky;
+    top: 0;
+}
+
+.header-image__logo{
+
+    width: 40px;
+}
+
+.header-button__menu i::before{
+
+    content: "\e904";
+    font-size: 24px;
+}
+
+.header-button__notifications i::before{
+
+    content: "\e906";
+    font-size: 24px;
+}
+
+/***Side-Menu***/
+
+.side-menu{
+
+    background-color: var(--header_background-color);
+    width: 75vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: -100vw;
+    transition: 400ms all;
+}
+
+.side-menu--actived{
+
+    transition: 400ms all;
+    left: 0;
+}
+
+.side-menu___logo{
+
+    align-self: center;
+    width: 118px;
+    margin: 1em;
+}
+
+.side-menu__link{
+
+    font-size: 16px;
+    color: #95999C;
+    height: 64px;
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.side-menu__link:active{
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-left: 8px solid white;
+    padding-left: 16px;
+}
+
+.side-menu__link::before{
+
+    font-size: 24px;
+    margin: 0 12px 0 0;
+}
+
+.side-menu__link--inicio::before{
+
+    content: "\e902";
+}
+
+.side-menu__link--video::before{
+
+    content: "\e90e";
+}
+
+.side-menu__link--picos::before{
+
+    content: "\e909";
+}
+
+.side-menu__link--integrantes::before{
+
+    content: "\e903";
+}
+
+.side-menu__link--camisas::before{
+
+    content: "\e900";
+}
+
+.side-menu__link--pinturas::before{
+
+    content: "\e90a";
+} 
+
+/***Secoes***/
+
+.secao{
+
+    grid-column: span 2;
+    display: grid;
+    row-gap: 16px;   
+}
+
+.secao-destaque{
+
+    margin: 16px 0;
+}
+
+.titulo-pagina{
+
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/***Card-Box***/
+
+.card-box{
+
+    background-color: var(--card-box_background);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-box__imagem{
+
+    width: 100%;
+}
+
+.card-box__conteudo{
+
+    padding: 1em;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+}
+
+.card-box__destaque{
+
+    font-size: 16px;
+    grid-column: span 2;
+}
+
+.card-box__titulo{
+
+    font-size: 18px;
+    font-weight: 700;
+    grid-column: span 2;
+}
+
+.card-box__perfil{
+
+    color: var(--card-box__info--color);
+    font-size: 14px;
+    grid-column: span 2;
+}
+
+.card-box__info{
+
+    color: var(--card-box__info--color);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.card-box__info::before{
+
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.card-box__destaque{
+
+    margin-bottom: 4px;
+}
+
+.videos-destaque__titulo{
+
+    font-size: 18px;
+}
+
+.secao__titulo{
+
+    font-size: 18px;  
+}
+
+/*button*/
+
+.card-box__button{
+
+    background-color: var(--card-box__button--background);
+    border-radius: 7px;
+    font-size: var(--card-box__button--font__size);
+    font-weight: var(--card-box__button--font__weight);
+    height: var(--card-box__button--tamanho);
+    width: var(--card-box__button--tamanho);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: end;
+    font-weight: 600;
+}
+
+.card-box__button::before{
+
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.card-box__button--destaque{
+
+    grid-column: span 2;
+    width: 100%;
+}
+
+.card-box__button--destaque::before{
+
+    margin-right: 8px;
+}
+
+/*icones*/
+
+.card-box__button--comprar::before{
+
+    content: "\e901";
+}
+
+.card-box__button--picos::before{
+
+    content: "\e901";
+}
+
+.card-box__button--play::before{
+
+    content: "\e90b";
+}
+
+.card-box__info--minutagem::before{
+
+    content: "\e90c";
+}
+
+.card-box__info--vizualizacoes::before{
+
+    content: "\e90f";
+}
